@@ -52,23 +52,29 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">WaveUIE: Policy-Driven Contrastive Learning for Underwater Image
-              Super-Resolution and Enhancement in the Wavelet Domain</h1>
+            <h1 class="title is-1 publication-title">WaveUIE: Policy-Driven Contrastive Learning for Underwater Image Enhancement in the Wavelet Domain</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=SBoHvVQAAAAJ" target="_blank">Zhihao Chen</a><sup>1 </sup>,</span>
                 <span class="author-block">
                   <a href="https://scholar.google.com/citations?user=qKxpHGcAAAAJ" target="_blank">Yiyuan Ge</a><sup>2,#</sup>,</span>
-<!--                  <span class="author-block">-->
-<!--                    <a href="https://scholar.google.com/citations?user=GWF20_wAAAAJ" target="_blank">Ziyang Wang</a><sup>3,#</sup>,-->
-<!--                  </span>-->
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=GWF20_wAAAAJ" target="_blank">Ziyang Wang</a><sup>3</sup>,
+                  </span>
+              <span class="author-block">
+                    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=XpMnJ1QAAAAJ" target="_blank">Xin Lin</a><sup>4</sup>,
+                  </span>
+              <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=V-6H56AAAAAJ" target="_blank">Lu Yang</a><sup>1</sup>,
+                  </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1 </sup>Beijing University of Posts and Telecommunications<br>
+                    <span class="author-block"><sup>1 </sup>Beijing University of Posts and Telecommunications <br>
                       <sup>2 </sup>South China University of Technology <br>
-<!--                      <sup>3 </sup>University of Oxford</span>-->
+                      <sup>3 </sup>University of Oxford <br>
+                      <sup>4 </sup>Guangzhou University </span>
 
 <!--                    <span class="eql-cntrb"><small><br><sup>* </sup>Indicates Equal Contribution</small></span>-->
                     <span class="eql-cntrb"><small><br><sup># </sup>Indicates Corresponding Author</small></span>
@@ -89,7 +95,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/1024AILab/MambaUIE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -166,7 +172,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Underwater image enhancement remains challenging in computer vision due to complex degradation phenomena. While existing CNN and ViT approaches predominantly focus on spatial domain modeling, they inadequately address two critical aspects: 1) underutilization of frequency domain features, and 2) insufficient exploitation of degradation patterns in negative samples. To overcome these limitations, we propose a wavelet-driven framework called WaveUIE. Specifically, our method decomposes images into high/low-frequency components via wavelet transform.  In addition, we introduce a Low-Frequency Enhancement Block (LFEBlock), which effectively eliminates color casts and blur. In parallel, a High-Frequency Enhancement Block (HFEBlock) is introduced to restore fine textures, ensuring detailed recovery. Moreover, we introduce a Dynamic Frequency Fusion Block (DFFBlock), which orchestrates cross-frequency interactions by first calibrating high-frequency data with the enhanced low-frequency features, and then synthesizing them into coherent visual outputs. Finally, we design a Wavelet Fine-Grained Contrastive Policy to establish contrastive learning in four distinct wavelet subbands, systematically leveraging degradation characteristics from negative samples to enhance the model performance. Experimental evaluations demonstrate state-of-the-art performance across multiple benchmarks, with significant improvements in both SSIM and UIQM metrics over existing methods.
+            Underwater image enhancement remains challenging in computer vision due to its complex and diverse degradation phenomena. Existing state-of-the-art methods mainly focus on spatial domain modelling and demonstrate superiority, but they fall short in two key aspects: 1) underutilization of frequency domain features, and 2) insufficient exploitation of the relationship between the positive and negative samples during the training. To overcome these limitations, we propose a wavelet-driven framework called WaveUIE. Specifically, our method decomposes images into high/low-frequency components via the wavelet transform. To better mine the features of these two component patterns, a high-frequency enhancement block (HFEBlock) is introduced to restore fine textures of the high-frequency component. In addition, we also introduce a low-frequency enhancement block (LFEBlock) to effectively eliminates color casts and blur of the low-frequency features. Moreover, we design a dynamic frequency fusion block (DFFBlock), which orchestrates cross-frequency interactions by first calibrating high-frequency data with the enhanced low-frequency features, and then synthesising them into coherent visual outputs. Finally, we design a wavelet fine-grained contrastive policy (WFCPolicy) to decompose images into four sub-bands and impose contrastive constraints on the enhanced result (anchor) within the sub-band space. These constraints pull the anchor closer to the ground-truth (positive samples) while pushing it away from the original degraded image (negative samples), thereby explicitly leveraging the degradation features present in different frequency sub-bands to improve enhancement performance. Experimental evaluations demonstrate state-of-the-art performance across multiple benchmarks, with significant improvements in both SSIM and UIQM metrics over existing methods.
           </p>
         </div>
       </div>
